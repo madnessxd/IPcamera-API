@@ -1,2 +1,2 @@
 # IPcamera-API
-php files to send and recieve IP camera data
+php files to send and receive IP camera data
