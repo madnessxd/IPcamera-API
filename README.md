@@ -1,6 +1,8 @@
 ## IPcamera-API
 php files to send and receive IP camera data
 
+-------------
+
 ###[Getters]
 
 ####check_user.php
@@ -19,6 +21,10 @@ pri: |1: Visitor / 2: Operator / 3: Superintende
 
 -------------
 
+scr:[check_user.php](src/check_user.php)
+
+-------------
+
 ####get_camera_params.php
 Gain camera parameter establishment
 #####syntax:
@@ -28,7 +34,11 @@ get_camera_params.php?user=admin&pwd=admin&ip=192.168.2.12
 {"Data":{"resolution":"32","brightness":"112","contrast":"3","mode":"1","flip":"3","fps":"0"}}
 
 #####linked class:
-camera_control.php
+[camera_control](#camera_controlphp)
+
+-------------
+
+scr:[get_camera_params.php](src/get_camera_params.php)
 
 -------------
 
@@ -40,6 +50,10 @@ get_forbidden.php?user=admin&pwd=admin&ip=192.168.2.12
 #####returns:
 {"Data":{"schedule_enable":"0","schedule_sun_0":"0","schedule_sun_1":"0","schedule_sun_2":"0","schedule_mon_0":"0","schedule_mon_1":"0","schedule_mon_2":"0","schedule_tue_0":"0","schedule_tue_1":"0","schedule_tue_2":"0","schedule_wed_0":"0","schedule_wed_1":"0","schedule_wed_2":"0","schedule_thu_0":"0","schedule_thu_1":"0","schedule_thu_2":"0","schedule_fri_0":"0","schedule_fri_1":"0","schedule_fri_2":"0","schedule_sat_0":"0","schedule_sat_1":"0","schedule_sat_2":"0"}}
 
+-------------
+
+scr:[get_forbidden.php](src/get_forbidden.php)
+
 ------------
 
 ####get_log.php
@@ -50,6 +64,10 @@ get_log.php?user=admin&pwd=admin&ip=192.168.2.12
 #####returns:
 {"Data":{"log_text":"'"}}
 
+-------------
+
+scr:[get_log.php](src/get_log.php)
+
 ------------
 
 ####get_misc.php
@@ -59,6 +77,10 @@ get_misc.php?user=admin&pwd=admin&ip=192.168.2.12
 
 #####returns:
 {"Data":{"led_mode":"0","ptz_center_onstart":"0","ptz_auto_patrol_interval":"0","ptz_auto_patrol_type":"0","ptz_patrol_h_rounds":"0","ptz_patrol_v_rounds":"0","ptz_patrol_rate":"0","ptz_preset_rate":"1","ptz_patrol_up_rate":"2","ptz_patrol_down_rate":"2","ptz_patrol_left_rate":"2","ptz_patrol_right_rate":"2","ptz_disable_preset":"0","ptz_preset_onstart":"1"}}
+
+-------------
+
+scr:[get_misc.php](src/get_misc.php)
 
 ------------
 
@@ -72,6 +94,10 @@ get_misc.php?user=admin&pwd=admin&ip=192.168.2.12
 
 <i>Note: The full return is much longer</i>
 
+-------------
+
+scr:[get_params.php](src/get_params.php)
+
 ------------
 
 ####get_status.php
@@ -82,6 +108,10 @@ get_status.php?user=admin&pwd=admin&ip=192.168.2.12
 #####returns:
 {"Data":{"id":"'001122334455'","sys_ver":"'1.2.3.4'","app_ver":"'4.5.6.7'","alias":"'name'","now":"1234567890","tz":"0","alarm_status":"0","ddns_status":"0","ddns_host":"''","oray_type":"0","upnp_status":"0","p2p_status":"0","p2p_local_port":"23411","msn_status":"0"}}
 
+-------------
+
+scr:[get_status.php](src/get_status.php)
+
 ------------
 
 ####get_wifi_scan_result.php
@@ -91,6 +121,10 @@ get_wifi_scan_result.php?user=admin&pwd=admin&ip=192.168.2.12
 #####returns:
 {"Data":{"ap_bssid":"new Array()","ap_ssid":"new Array()","ap_mode":"new Array()","ap_security":"new Array()","ap_bssid[0]":"'000000123456'","ap_ssid[0]":"'name'","ap_mode[0]":"0","ap_security[0]":"1","ap_number":"1"}}
 
+-------------
+
+scr:[get_wifi_scan_result.php](src/get_wifi_scan_result.php)
+
 ------------
 
 ####wifi_scan.php
@@ -98,7 +132,11 @@ Starts the Wifi scan. See the scan results at get_wifi_scan_result.php
 #####syntax:
 wifi_scan.php?user=admin&pwd=admin&ip=192.168.2.12
 #####linked class:
-get_wifi_scan_result.php
+[#get_wifi_scan_result](#get_wifi_scan_resultphp)
+
+-------------
+
+scr:[wifi_scan.php](src/wifi_scan.php)
 
 ------------
 
@@ -118,7 +156,11 @@ param  | value
 5 Flip&mirror | 0: default / 1: flip / 2: mirror / 3: flip + mirror 
 
 #####linked class:
-get_camera_params.php
+[#get_camera_params](#get_camera_paramsphp)
+
+-------------
+
+scr:[camera_control.php](src/camera_control.php)
 
 -------------
 
@@ -159,14 +201,20 @@ command|result
 
 -------------
 
+scr:[decoder_control.php](src/decoder_control.php)
+
+-------------
+
 ####reboot.php
 Reboot the camera and clear log.php.
 #####syntax:
 reboot.php?user=admin&pwd=admin&ip=192.168.2.12
 
+-------------
+
+scr:[reboot.php](src/reboot.php)
+
 ------------
-
-
 
 ####set_misc.php
 Set the parameters of the camera Miscellaneous. Mostly used for setting the automatic patrol of a camera. You can also turn the lights on/off with led_mode.
@@ -182,3 +230,9 @@ ptz_auto_patrol_interval|0: No automatic inspection / l: automatic inspection in
 ptz_auto_patrol_type |0: None / 1: horizontal / 2: Vertical / 3: Horizontal + Vertical 
 ptz_patrol_h_rounds | levels inspection laps / 0: infinity
 ptz_patrol_v_rounds | vertical patrol laps / 0: infinity
+
+-------------
+
+scr:[set_misc.php](src/set_misc.php)
+
+-------------
