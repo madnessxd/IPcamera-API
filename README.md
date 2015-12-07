@@ -87,7 +87,7 @@ scr:[get_misc.php](src/get_misc.php)
 ####get_params.php
 Gain device parameters set.
 #####syntax:
-get_misc.php?user=admin&pwd=admin&ip=192.168.2.12
+get_params.php?user=admin&pwd=admin&ip=192.168.2.12
 
 #####returns:
 {"Data":{"id":"'001122334455'","sys_ver":"'1.2.3.4'","app_ver":"'4.5.6.7'","alias":"'name'","now":"1234567890","tz":"0","daylight_saving_time":"0","ntp_enable":"1","ntp_svr":"'time.nist.gov'","user1_name":"'admin'","user1_pwd":"'admin'" }}
